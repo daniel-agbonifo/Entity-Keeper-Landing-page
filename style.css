@@ -121,7 +121,7 @@ button a {
 }
 
 iframe {
-    height: 100%;
+    height: 80vh;
 }
 
 .list__items {
@@ -312,6 +312,10 @@ iframe {
 
     .action__container {
         padding-top: 1rem;
+    }
+
+    .action__container .text  {
+        margin-bottom: 15rem;
     }
 
     .action {
