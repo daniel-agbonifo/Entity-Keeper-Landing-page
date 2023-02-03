@@ -101,6 +101,10 @@ html {
     height: 100%;
 }
 
+iframe {
+    height: 100%;
+}
+
 .container img {
     width: 6rem;
 }
