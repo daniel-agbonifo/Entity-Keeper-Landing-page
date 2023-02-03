@@ -310,6 +310,10 @@ iframe {
         text-align: center;
     }
 
+    .action__container {
+        padding-top: 1rem;
+    }
+
     .action {
         flex-direction: column;
         gap: 5rem;
