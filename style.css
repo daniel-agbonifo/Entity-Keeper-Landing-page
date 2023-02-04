@@ -36,7 +36,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
     padding-top: 2rem;
     gap: 20rem;
     height: 100%;
@@ -121,7 +120,8 @@ button a {
 }
 
 iframe {
-    height: 650px;
+    height: 700px;
+    width: 100%;
 }
 
 .list__items {
@@ -214,7 +214,7 @@ iframe {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 0.5rem;
     font-size: 1.2rem;
 }
 
@@ -279,7 +279,9 @@ iframe {
     .hero img {
         width: 30rem;
         height: 30rem;
-        padding: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-bottom: 2rem;
     }
 
     .list__items {
@@ -324,7 +326,8 @@ iframe {
     }
 
     .action img {
-        padding: 10rem;
+       width: 25rem;
+       height: 25rem;
     }
 
     .footer {
