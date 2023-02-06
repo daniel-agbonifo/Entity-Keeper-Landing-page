@@ -35,15 +35,15 @@ html {
 .hero {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     padding-top: 2rem;
-    gap: 20rem;
+    gap: 5%;
     height: 100%;
 }
 
 .hero img {
-    width: 35rem;
-    height: 35rem;
+    width: 100%;
+    object-fit: contain;
 }
 
 .btn {
@@ -62,14 +62,14 @@ button a {
 }
 
 .left__column {
-    width: 40%;
+    width: 45%;
     gap: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    /* padding-top: 5rem; */
+    min-width: 350px;
 }
 
 .left__column h1 {
@@ -83,6 +83,8 @@ button a {
 
 .right__column {
     height: 100%;
+    width: 45%;
+    min-width: 350px;
 }
 
 .right__column h3 {
@@ -95,7 +97,7 @@ button a {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    padding-top: 2rem;
+    /* padding-top: 2rem;    */
 
 }
 
