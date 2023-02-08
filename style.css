@@ -20,8 +20,8 @@ html {
     align-items: center;
     background: #fff;
     height: 5rem;
-    position: fixed;
-    width: 100vw;
+    position: sticky;
+    width: 100%;
     top: 0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 2px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     z-index: 45;
@@ -35,15 +35,15 @@ html {
 .hero {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     padding-top: 2rem;
-    gap: 20rem;
+    gap: 5%;
     height: 100%;
 }
 
 .hero img {
-    width: 35rem;
-    height: 35rem;
+    width: 100%;
+    object-fit: contain;
 }
 
 .btn {
@@ -62,14 +62,15 @@ button a {
 }
 
 .left__column {
-    width: 40%;
+    width: 45%;
     gap: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding-top: 5rem;
+    min-width: 300px;
+    padding: 0 2vw;
 }
 
 .left__column h1 {
@@ -83,19 +84,22 @@ button a {
 
 .right__column {
     height: 100%;
+    width: 45%;
+    min-width: 300px;
+    padding: 0 2vw;
 }
 
 .right__column h3 {
     font-weight: 500;
 }
 
- .info {
+.info {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    padding-top: 2rem;
+    /* padding-top: 2rem;    */
 
 }
 
@@ -178,32 +182,33 @@ iframe {
 .action__container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     height: 100%;
-    padding-top: 5rem;
+    padding: 5rem 3vw 0;
 }
 
 .action__container .text {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    left: 4rem;
-    position: absolute;
-    margin-bottom: 35rem;
+    width: 45%;
+    min-width: 300px;
+}
+
+.action__container .text img {
+    width: 80%;
+    object-fit: contain;
+    margin: auto;
 }
 
 .action {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20rem;
+    width: 45%;
+    min-width: 300px;
 }
 
-.action img {
-    width: 40rem;
-    height: 40rem;
-}
 
 .footer {
     background: rgb(58, 65, 58);
@@ -221,50 +226,21 @@ iframe {
 .footer a {
     color: #fff;
 }
- .text a {
+
+.text a {
     text-decoration: none;
     color: var(--primary-color);
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 /* media queries */
 
 
-@media screen  and (max-width:600px) {
-
-    .nav {
-        height: 4rem;
-    }
-
-    .hero {
-        padding-top: 0;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .nav img {
-        width: 12rem;
-        margin-left: 1rem;
-    }
-
+@media screen and (max-width:639px) {
     .left__column {
-        width: 100%;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        min-width: 90%;
+        /* padding-left: 2rem;
+        padding-right: 2rem; */
         text-align: left;
     }
 
@@ -276,12 +252,35 @@ iframe {
         font-size: 1rem;
     }
 
+    .right__column {
+        min-width: 90%;
+    }
+
     .hero img {
-        width: 30rem;
-        height: 30rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        margin-bottom: 2rem;
+        width: 80%;
+    }
+
+    .action__container {
+        padding-top: 1rem;
+    }
+
+    .action__container .text {
+        min-width: 100%;
+    }
+
+    .action {
+        min-width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+
+    .nav {
+        height: 4rem;
+    }
+
+    .nav img {
+        width: 12rem;
+        margin-left: 1rem;
     }
 
     .list__items {
@@ -311,26 +310,12 @@ iframe {
         padding-right: 2rem;
         text-align: center;
     }
-
-    .action__container {
-        padding-top: 1rem;
-    }
-
-    .action__container .text  {
-        margin-bottom: 15rem;
-    }
-
     .action {
-        flex-direction: column;
-        gap: 5rem;
+        min-width: 100%;
     }
 
-    .action img {
-       width: 25rem;
-       height: 25rem;
-    }
 
     .footer {
         font-size: 1rem;
     }
-    }
+}
